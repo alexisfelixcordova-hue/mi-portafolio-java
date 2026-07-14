@@ -1,0 +1,398 @@
+/* =========================================================
+   semana.css
+   Estilos PROPIOS de las páginas de ejercicio (semanaX.jsp).
+   Depende de estilos.css (colores, header, fuentes, fondo).
+   Cárgalo siempre DESPUÉS de estilos.css.
+========================================================= */
+
+/* ===========================
+   MIGAS DE PAN
+=========================== */
+.migas {
+    background: var(--negro2);
+    border-bottom: 1px solid #23234a;
+    padding: 14px 0;
+}
+
+.migas .contenedor {
+    font-family: var(--retro);
+    font-size: 16px;
+    color: var(--texto-tenue);
+}
+
+.migas a {
+    color: var(--cian);
+    text-decoration: none;
+}
+.migas a:hover { text-decoration: underline; }
+
+.migas span { margin: 0 6px; color: #4a4a6a; }
+.migas-actual { color: var(--amarillo); }
+
+/* ===========================
+   HERO DEL NIVEL
+=========================== */
+.nivel-hero {
+    padding: 56px 0 44px;
+    background: linear-gradient(180deg, var(--negro2) 0%, var(--negro) 100%);
+    border-bottom: 3px solid var(--azul);
+    text-align: center;
+}
+
+.nivel-tag {
+    display: inline-block;
+    background: rgba(0,240,255,0.1);
+    border: 1px solid var(--cian);
+    color: var(--cian);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: var(--pixel);
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.nivel-hero h1 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 16px;
+    text-shadow: 0 0 12px rgba(255,212,0,0.4);
+}
+
+.nivel-hero p {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: var(--texto-tenue);
+    line-height: 1.7;
+}
+
+/* ===========================
+   GRID DEL CONTENIDO
+=========================== */
+.nivel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* ----- Bloque de imagen / captura ----- */
+.nivel-imagen { width: 100%; }
+
+.pantalla-juego {
+    position: relative;
+    background: #000;
+    border: 3px solid var(--azul);
+    border-radius: 14px;
+    box-shadow: 0 0 30px rgba(33,33,222,0.35);
+    overflow: hidden;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pantalla-juego img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    padding: 10px;
+}
+
+.pantalla-etiqueta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0,0,0,0.7);
+    border: 1px solid var(--amarillo);
+    color: var(--amarillo);
+    font-family: var(--pixel);
+    font-size: 9px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+/* ----- Bloque de información ----- */
+.nivel-info h2 {
+    font-size: 17px;
+    color: var(--amarillo);
+    margin-bottom: 16px;
+    text-shadow: 0 0 8px rgba(255,212,0,0.4);
+}
+
+.nivel-info > p {
+    font-size: 17px;
+    color: var(--texto-tenue);
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.nivel-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.nivel-lista li {
+    font-size: 16px;
+    color: var(--texto);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nivel-acciones {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Botón de descarga: variante del btn1 con un pulso llamativo */
+.btn-descarga {
+    position: relative;
+    animation: pulso-descarga 2s ease-in-out infinite;
+}
+
+@keyframes pulso-descarga {
+    0%, 100% { box-shadow: 0 0 16px rgba(255,212,0,0.6); }
+    50%      { box-shadow: 0 0 28px rgba(255,212,0,0.95); }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 900px) {
+    .nivel-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (max-width: 768px) {
+    .nivel-hero  { padding: 44px 0 34px; }
+    .nivel-hero h1 { font-size: 22px; }
+    .nivel-hero p  { font-size: 16px; }
+}
+
+.infografia-titulo {
+    text-align: center;
+    margin: 64px 0 0;
+}
+
+.infografia-titulo h2 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.infografia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.info-card {
+    background: var(--negro2);
+    border: 2px solid #23234a;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--amarillo);
+    box-shadow: 0 12px 28px rgba(255,212,0,0.16);
+}
+
+.info-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 24px;
+}
+
+.circulo-header { background: linear-gradient(135deg, #11112a, #1a1a38); border-bottom: 2px solid #ffd40033; }
+.rect-header    { background: linear-gradient(135deg, #180a20, #1a0f24); border-bottom: 2px solid #ff3cac33; }
+
+.figura-svg { flex-shrink: 0; }
+
+.info-num {
+    display: block;
+    font-family: var(--pixel);
+    font-size: 24px;
+    color: var(--azul-claro);
+    text-shadow: 0 0 10px rgba(44,44,255,0.5);
+    margin-bottom: 4px;
+}
+
+.info-card-header h3 {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+}
+
+.info-card-body { padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; }
+
+.formula-bloque {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    padding: 10px 14px;
+    border-left: 3px solid var(--amarillo);
+}
+
+.formula-label {
+    font-family: var(--pixel);
+    font-size: 9px;
+    color: var(--texto-tenue);
+    min-width: 100px;
+}
+
+.formula-eq {
+    font-family: var(--retro);
+    font-size: 20px;
+    color: var(--amarillo);
+    letter-spacing: 0.5px;
+}
+
+.java-bloque {
+    background: #060610;
+    border: 1px solid #23234a;
+    border-radius: 8px;
+    padding: 14px 16px;
+    position: relative;
+}
+
+.java-label {
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    background: var(--azul-claro);
+    color: #000;
+    font-family: var(--pixel);
+    font-size: 8px;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.java-bloque pre {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #8be9fd;
+    white-space: pre-wrap;
+    margin: 0;
+    padding-top: 6px;
+}
+
+.calculadora-arcade {
+    margin-top: 60px;
+    background: var(--negro2);
+    border: 2px solid var(--azul);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(33,33,222,0.2);
+}
+
+.calc-header {
+    font-family: var(--pixel);
+    font-size: 12px;
+    color: var(--amarillo);
+    background: #11112a;
+    padding: 18px 24px;
+    border-bottom: 2px solid #23234a;
+}
+
+.calc-tabs {
+    display: flex;
+    border-bottom: 2px solid #23234a;
+}
+
+.calc-tab {
+    flex: 1;
+    font-family: var(--pixel);
+    font-size: 10px;
+    padding: 14px;
+    background: none;
+    border: none;
+    color: var(--texto-tenue);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.calc-tab:hover { background: rgba(255,212,0,0.06); color: var(--amarillo); }
+.calc-tab.activo { background: rgba(255,212,0,0.1); color: var(--amarillo); border-bottom: 3px solid var(--amarillo); }
+
+.calc-panel { padding: 28px 24px; display: flex; flex-direction: column; gap: 18px; }
+
+.calc-campo { display: flex; flex-direction: column; gap: 8px; }
+
+.calc-campo label {
+    font-family: var(--pixel);
+    font-size: 10px;
+    color: var(--cian);
+}
+
+.calc-campo input {
+    background: #060610;
+    border: 2px solid #23234a;
+    border-radius: 8px;
+    color: var(--amarillo);
+    font-family: var(--retro);
+    font-size: 20px;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    max-width: 280px;
+}
+
+.calc-campo input:focus { border-color: var(--amarillo); }
+
+.calc-resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #060610;
+    border: 1px solid #23234a;
+    border-radius: 10px;
+    padding: 18px;
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.res-fila {
+    display: flex;
+    gap: 14px;
+    font-family: var(--retro);
+    font-size: 20px;
+    align-items: center;
+}
+
+.res-fila span { color: var(--texto-tenue); min-width: 140px; }
+.res-fila strong { color: var(--amarillo); }
+
+.calc-resultado canvas {
+    margin-top: 8px;
+    border-radius: 8px;
+    background: #0a0a1a;
+    border: 1px solid #23234a;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .infografia-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .formula-bloque   { flex-direction: column; align-items: flex-start; }
+    .calc-campo input { max-width: 100%; }
+}
