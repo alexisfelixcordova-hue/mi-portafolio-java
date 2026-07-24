@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="icon" href="img/icon.pn
+    <link rel="icon" href="img/icon.png"
           g"/>
 </head>
 <body>
@@ -56,7 +56,7 @@
 <section class="stats-row">
     <div class="stat-card">
         <div class="stat-icon">
-            <img src="img/icono-semanas.png" alt="13 Semanas">
+            <img src="img/logo.jpeg" alt="13 Semanas">
         </div>
         <p class="stat-titulo">13 Semanas</p>
         <p class="stat-sub">Ejercicios completos</p>
@@ -70,17 +70,17 @@
     </div>
     <div class="stat-card">
         <div class="stat-icon">
-            <img src="img/icono-jsp.png" alt="JSP">
+            <img src="img/tomcat2.png" alt="JSP">
         </div>
-        <p class="stat-titulo">JSP</p>
-        <p class="stat-sub">Interfaz web</p>
+        <p class="stat-titulo">Tomcat</p>
+        <p class="stat-sub">Servidor Web</p>
     </div>
     <div class="stat-card">
         <div class="stat-icon">
-            <img src="img/icono-practica.png" alt="100% Práctica">
+            <img src="img/railway.png" alt="100% Práctica">
         </div>
-        <p class="stat-titulo">100% Práctica</p>
-        <p class="stat-sub">Aprender haciendo</p>
+        <p class="stat-titulo">Railway</p>
+        <p class="stat-sub">Servicio Web</p>
     </div>
 </section>
 
@@ -129,19 +129,19 @@
             <img src="img/icon.png" alt="Imagen 1">
         </div>
         <div class="galeria-card">
-            <img src="img/galeria2.jpg" alt="Imagen 2">
+            <img src="img/codigo.png" alt="Imagen 2">
         </div>
         <div class="galeria-card">
-            <img src="img/galeria3.jpg" alt="Imagen 3">
+            <img src="img/meme4.png" alt="Imagen 3">
         </div>
         <div class="galeria-card">
-            <img src="img/galeria4.jpg" alt="Imagen 4">
+            <img src="img/login.png" alt="Imagen 4">
         </div>
         <div class="galeria-card">
-            <img src="img/galeria5.jpg" alt="Imagen 5">
+            <img src="img/perritoxd.jfif" alt="Imagen 5">
         </div>
         <div class="galeria-card">
-            <img src="img/galeria6.jpg" alt="Imagen 6">
+            <img src="img/perrito2xd.jfif" alt="Imagen 6">
         </div>
     </div>
 </section>
