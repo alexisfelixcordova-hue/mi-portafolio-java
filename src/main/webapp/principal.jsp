@@ -4,539 +4,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio AlexisLenguaje de Programación</title>
+    <title>Portafolio — Alexis Félix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="icon" href="img/icon.png"/>
+    <link rel="icon" href="img/icon.pn
+          g"/>
 </head>
 <body>
 
-<!-- ======= FONDO DE PUNTOS ESTILO LABERINTO ======= -->
-<div class="fondo-puntos" aria-hidden="true"></div>
+<!-- ===== NAVBAR (reutilizable, ver nav.jsp) ===== -->
+<%@ include file="INCLUIDE/nav.jsp" %>
 
-<!-- ======= BARRA DE PROGRESO ESTILO PACMAN ======= -->
-<div class="barra-progreso" id="barraProgreso">
-    <div class="barra-relleno" id="barraRelleno"></div>
-    <div class="barra-pacman" id="barraPacman"></div>
-</div>
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+    <div class="hero-glow"></div>
+    <div class="hero-contenido">
+        <p class="hero-eyebrow">PORTAFOLIO · LENGUAJE DE PROGRAMACIÓN 2026</p>
+        <h1 class="hero-titulo">APRENDE JAVA<br>JUGANDO NIVEL POR NIVEL</h1>
+        <p class="hero-texto">13 semanas de ejercicios prácticos convertidos en un mapa de niveles.
+            Elige una semana, controla al personaje y descubre el código detrás de cada reto.</p>
+        <a href="#mapa-niveles" class="btn-cta">▶ Explorar niveles</a>
 
-<!-- ======= MARCADOR DE PUNTAJE ======= -->
-<div class="marcador" id="marcador">
-    <span class="marcador-label">SCORE</span>
-    <span class="marcador-valor" id="marcadorValor">000000</span>
-</div>
-
-<!-- ======= HEADER ======= -->
-<header>
-    <div class="logo">
-        <span class="logo-pacman" aria-hidden="true"></span>
-        <span>PORTAFOLIO<em>.exe</em></span>
+        <div class="hero-imagen">
+            <svg viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="500" height="300" rx="16" fill="#15161d" stroke="#2a2c38" stroke-width="2"/>
+                <rect x="10" y="10" width="500" height="34" rx="16" fill="#1d1f29"/>
+                <circle cx="30" cy="27" r="5" fill="#ff4d5e"/>
+                <circle cx="48" cy="27" r="5" fill="#f2c14e"/>
+                <circle cx="66" cy="27" r="5" fill="#34d1c9"/>
+                <rect x="34" y="70" width="130" height="10" rx="5" fill="#7c5cff"/>
+                <rect x="34" y="92" width="200" height="10" rx="5" fill="#ff4d5e"/>
+                <rect x="34" y="114" width="90" height="10" rx="5" fill="#34d1c9"/>
+                <rect x="60" y="136" width="220" height="10" rx="5" fill="#4a4c5c"/>
+                <rect x="60" y="158" width="160" height="10" rx="5" fill="#4a4c5c"/>
+                <rect x="34" y="188" width="150" height="10" rx="5" fill="#7c5cff"/>
+                <rect x="60" y="210" width="240" height="10" rx="5" fill="#4a4c5c"/>
+                <rect x="34" y="240" width="110" height="10" rx="5" fill="#ff4d5e"/>
+                <rect x="360" y="70" width="120" height="180" rx="10" fill="#1d1f29" stroke="#2a2c38"/>
+                <rect x="378" y="92" width="84" height="10" rx="5" fill="#34d1c9"/>
+                <rect x="378" y="112" width="60" height="10" rx="5" fill="#4a4c5c"/>
+                <rect x="378" y="132" width="70" height="10" rx="5" fill="#4a4c5c"/>
+                <rect x="378" y="160" width="84" height="30" rx="6" fill="#ff4d5e" opacity="0.15" stroke="#ff4d5e"/>
+                <text x="420" y="180" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff4d5e">Java</text>
+            </svg>
+        </div>
     </div>
-
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-    </button>
-
-    <div class="nav-desktop-wrap">
-        <nav class="nav-desktop">
-            <ul>
-                <li><a href="semana1.jsp"><span class="nivel-num">1</span>Semana 1</a></li>
-                <li><a href="semana2.jsp"><span class="nivel-num">2</span>Semana 2</a></li>
-                <li><a href="semana3.jsp"><span class="nivel-num">3</span>Semana 3</a></li>
-                <li><a href="semana4.jsp"><span class="nivel-num">4</span>Semana 4</a></li>
-                <li><a href="semana5.jsp"><span class="nivel-num">5</span>Semana 5</a></li>
-                <li><a href="semana6.jsp"><span class="nivel-num">6</span>Semana 6</a></li>
-                <li><a href="semana7.jsp"><span class="nivel-num">7</span>Semana 7</a></li>
-                <li><a href="semana8.jsp"><span class="nivel-num">8</span>Semana 8</a></li>
-                <li><a href="semana9.jsp"><span class="nivel-num">9</span>Semana 9</a></li>
-                <li><a href="semana10.jsp"><span class="nivel-num">10</span>Semana 10</a></li>
-                <li><a href="semana11.jsp"><span class="nivel-num">11</span>Semana 11</a></li>
-                <li><a href="semana12.jsp"><span class="nivel-num">12</span>Semana 12</a></li>
-                <li><a href="semana13.jsp"><span class="nivel-num">13</span>Semana 13</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <a href="#arcade" class="btn-header" id="btnArcade">
-        <span class="ghost-icon" aria-hidden="true"></span>
-        Modo Arcade
-    </a>
 </header>
 
-<!-- ======= MENÚ MÓVIL ======= -->
-<nav class="nav-mobile" id="navMobile">
-    <ul>
-        <li><a href="Semana1.jsp">Semana 1</a></li>
-        <li><a href="semana2.jsp">Semana 2</a></li>
-        <li><a href="semana3.jsp">Semana 3</a></li>
-        <li><a href="semana4.jsp">Semana 4</a></li>
-        <li><a href="semana5.jsp">Semana 5</a></li>
-        <li><a href="semana6.jsp">Semana 6</a></li>
-        <li><a href="semana7.jsp">Semana 7</a></li>
-        <li><a href="semana8.jsp">Semana 8</a></li>
-        <li><a href="semana9.jsp">Semana 9</a></li>
-        <li><a href="semana10.jsp">Semana 10</a></li>
-        <li><a href="semana11.jsp">Semana 11</a></li>
-        <li><a href="semana12.jsp">Semana 12</a></li>
-        <li><a href="semana13.jsp">Semana 13</a></li>
-    </ul>
-</nav>
-
-<!-- ======= HERO ======= -->
-<section class="hero" id="inicio">
-    <div class="hero-texto">
-        <span class="etiqueta"> — PORTAFOLIO ACADÉMICO</span>
-        <h1>LISTO <span class="parpadeo">JUGADOR</span> ALEXIS</h1>
-        <p class="hero-firma">Soy <strong>Alexis Félix</strong>, estudiante del curso <strong>Lenguaje de Programación</strong>.</p>
-        <p>Bienvenido a mi recorrido por el curso: cada semana es un nivel superado, con nuevos conceptos, nuevos retos y nuevo código.</p>
-        <p>Programando <b>WHILE</b>   se puede y <b>IF</b> puedo ayudar al mundo  <b>MEJOR</b> </p>
-        <div class="botones">
-            <a href="#semanas" class="btn1">▶ Iniciar Partida</a>
-            <a href="#herramientas" class="btn2">Ver Power-Ups</a>
+<!-- ===== FILA DE ESTADÍSTICAS ===== -->
+<section class="stats-row">
+    <div class="stat-card">
+        <div class="stat-icon">
+            <img src="img/icono-semanas.png" alt="13 Semanas">
         </div>
-        <div class="vidas" id="vidasHero">
-            <span>VIDAS:</span>
-            <span class="vida" data-vida="1"></span><span class="vida" data-vida="2"></span><span class="vida" data-vida="3"></span>
-        </div>
-        <p class="vidas-nota">↳ Estas vidas se usan en el minijuego "Esquiva Fantasmas" más abajo </p>
+        <p class="stat-titulo">13 Semanas</p>
+        <p class="stat-sub">Ejercicios completos</p>
     </div>
+    <div class="stat-card">
+        <div class="stat-icon">
+            <img src="img/java.png" alt="Java">
+        </div>
+        <p class="stat-titulo">Java</p>
+        <p class="stat-sub">Lenguaje principal</p>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">
+            <img src="img/icono-jsp.png" alt="JSP">
+        </div>
+        <p class="stat-titulo">JSP</p>
+        <p class="stat-sub">Interfaz web</p>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">
+            <img src="img/icono-practica.png" alt="100% Práctica">
+        </div>
+        <p class="stat-titulo">100% Práctica</p>
+        <p class="stat-sub">Aprender haciendo</p>
+    </div>
+</section>
 
-    <div class="hero-juego" aria-hidden="true">
-        <div class="tablero">
-            <div class="pacman-jugando"></div>
-            <div class="puntos-fila"></div>
-            <div class="fantasma f1"></div>
-            <div class="fantasma f2"></div>
+<!-- ===== SOBRE EL PORTAFOLIO ===== -->
+<section class="sobre" id="sobre">
+    <div class="sobre-texto">
+        <p class="seccion-eyebrow">SOBRE ESTE PROYECTO</p>
+        <h2 class="seccion-titulo">Un portafolio que se recorre, no solo se lee</h2>
+        <p class="sobre-parrafo">
+            Este espacio reúne los ejercicios desarrollados durante el curso de Lenguaje de Programación,
+            usando Java en el backend y JSP para la interfaz web. En vez de una lista plana de enlaces,
+            cada semana es un nivel dentro de un mapa que puedes recorrer con tu propio personaje.
+        </p>
+        <ul class="sobre-lista">
+            <li>✔ Ejercicios de lógica, condicionales y estructuras de control</li>
+            <li>✔ Cálculos matemáticos aplicados (áreas, perímetros y más)</li>
+            <li>✔ Interfaces interactivas hechas en JSP + CSS + JavaScript</li>
+            <li>✔ Código descargable en cada nivel</li>
+        </ul>
+        <a href="#mapa-niveles" class="btn-outline">Ver el mapa completo →</a>
+    </div>
+    <div class="sobre-visual">
+        <div class="visual-card visual-card-1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy">
+            <span>Java</span>
+        </div>
+        <div class="visual-card visual-card-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" loading="lazy">
+            <span>CSS3</span>
+        </div>
+        <div class="visual-card visual-card-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
+            <span>JavaScript</span>
         </div>
     </div>
 </section>
 
-<!-- ======= SEMANAS / EJERCICIOS ======= -->
-<section id="semanas" class="seccion fondo-arcade">
-    <div class="contenedor">
-        <h2><span class="coin">●</span> Selecciona tu Nivel</h2>
-        <p class="subtitulo">13 semanas, 13 niveles superados</p>
+<!-- ===== GALERÍA (coloca aquí tus propias imágenes) ===== -->
+<section class="galeria-seccion" id="galeria">
+    <p class="seccion-eyebrow centrado">GALERÍA</p>
+    <h2 class="seccion-titulo centrado">Un vistazo al proyecto</h2>
+    <p class="subtitulo-juego">Reemplaza cada imagen en la carpeta img/ con tus propias capturas</p>
 
-        <div class="cards">
-            <div class="card"><a href="semana1.jsp" class="card-link">
-                <div class="card-num">01</div>
-                <div class="card-body"><h3>Semana 1</h3><p>Importe de compra, descuento y lapiceros de obsequio.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana2.jsp" class="card-link">
-                <div class="card-num">02</div>
-                <div class="card-body"><h3>Semana 2</h3><p>Cálculo de sueldo básico, bruto, descuentos y neto.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana3.jsp" class="card-link">
-                <div class="card-num">03</div>
-                <div class="card-body"><h3>Semana 3</h3><p>Programa que determina el área de un círculo.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana4.jsp" class="card-link">
-                <div class="card-num">04</div>
-                <div class="card-body"><h3>Semana 4</h3><p>Cálculo de la hipotenusa con el Teorema de Pitágoras.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana5.jsp" class="card-link">
-                <div class="card-num">05</div>
-                <div class="card-body"><h3>Semana 5</h3><p>Estructuras condicionales y validación de datos.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana6.jsp" class="card-link">
-                <div class="card-num">06</div>
-                <div class="card-body"><h3>Semana 6</h3><p>Estructuras repetitivas y control de flujo.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana7.jsp" class="card-link">
-                <div class="card-num">07</div>
-                <div class="card-body"><h3>Semana 7</h3><p>Arreglos unidimensionales y procesamiento de datos.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana8.jsp" class="card-link">
-                <div class="card-num">08</div>
-                <div class="card-body"><h3>Semana 8</h3><p>Arreglos bidimensionales y matrices.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana9.jsp" class="card-link">
-                <div class="card-num">09</div>
-                <div class="card-body"><h3>Semana 9</h3><p>Funciones y modularización de código.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana10.jsp" class="card-link">
-                <div class="card-num">10</div>
-                <div class="card-body"><h3>Semana 10</h3><p>Programación orientada a objetos: clases y atributos.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana11.jsp" class="card-link">
-                <div class="card-num">11</div>
-                <div class="card-body"><h3>Semana 11</h3><p>Herencia y polimorfismo en Java.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana12.jsp" class="card-link">
-                <div class="card-num">12</div>
-                <div class="card-body"><h3>Semana 12</h3><p>Manejo de excepciones y validaciones avanzadas.</p></div>
-            </a></div>
-
-            <div class="card"><a href="semana13.jsp" class="card-link">
-                <div class="card-num">13</div>
-                <div class="card-body"><h3>Semana 13</h3><p>Proyecto integrador final del curso.</p></div>
-            </a></div>
+    <div class="galeria-grid">
+        <div class="galeria-card">
+            <img src="img/icon.png" alt="Imagen 1">
+        </div>
+        <div class="galeria-card">
+            <img src="img/galeria2.jpg" alt="Imagen 2">
+        </div>
+        <div class="galeria-card">
+            <img src="img/galeria3.jpg" alt="Imagen 3">
+        </div>
+        <div class="galeria-card">
+            <img src="img/galeria4.jpg" alt="Imagen 4">
+        </div>
+        <div class="galeria-card">
+            <img src="img/galeria5.jpg" alt="Imagen 5">
+        </div>
+        <div class="galeria-card">
+            <img src="img/galeria6.jpg" alt="Imagen 6">
         </div>
     </div>
 </section>
 
-<!-- ======= FICHA DE JUGADOR ======= -->
-<section id="perfil" class="seccion fondo-arcade">
-    <div class="contenedor">
-        <h2><span class="coin">●</span> Ficha de Jugador</h2>
-        <p class="subtitulo">Estadísticas del personaje principal</p>
+<!-- ===== MAPA DE NIVELES ===== -->
+<section class="mapa-niveles-seccion" id="mapa-niveles">
 
-        <div class="ficha-jugador">
-            <div class="ficha-avatar" aria-hidden="true">
-                <div class="avatar-pacman"></div>
-            </div>
-            <div class="ficha-datos">
-                <h3>ALEXIS FÉLIX</h3>
-                <p class="ficha-rol">Estudiante · Lenguaje de Programación</p>
-                <p class="ficha-bio">Amo programar , me encanta lo simple y lo complicado , si algo parece imposible  solo comienzo a hacerlo... .</p>
-                <div class="ficha-stats">
-                    <div class="stat"><span class="stat-num">13</span><span class="stat-label">Niveles</span></div>
-                    <div class="stat"><span class="stat-num">01</span><span class="stat-label">Lenguaje</span></div>
-                    <div class="stat"><span class="stat-num">2026</span><span class="stat-label">Año</span></div>
-                </div>
-            </div>
-        </div>
+    <div class="montanas">
+        <svg class="capa-montana capa-1" viewBox="0 0 1200 300" preserveAspectRatio="none">
+            <polygon points="0,300 0,180 90,140 180,190 270,110 360,170 460,90 560,160 650,120 740,185 830,100 920,165 1010,130 1100,195 1200,150 1200,300"/>
+        </svg>
+        <svg class="capa-montana capa-2" viewBox="0 0 1200 300" preserveAspectRatio="none">
+            <polygon points="0,300 0,220 100,170 200,225 310,150 420,215 520,160 630,220 730,175 840,230 940,180 1050,235 1150,190 1200,210 1200,300"/>
+        </svg>
+        <svg class="capa-montana capa-3" viewBox="0 0 1200 300" preserveAspectRatio="none">
+            <polygon points="0,300 0,255 120,225 240,260 360,215 480,255 600,220 720,258 840,225 960,262 1080,230 1200,255 1200,300"/>
+        </svg>
     </div>
+
+    <p class="seccion-eyebrow centrado">EXPLORA EL PORTAFOLIO</p>
+    <h2 class="seccion-titulo centrado">Selecciona una semana para empezar</h2>
+    <p class="subtitulo-juego">Mueve al personaje con las flechas ← ↑ → ↓ y presiona ENTER para entrar</p>
+
+    <main class="mapa-area" id="mapaArea">
+        <svg class="camino-svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet">
+            <path d="M 110 780
+                     Q 60 680, 160 630
+                     Q 300 560, 260 460
+                     Q 220 360, 340 320
+                     Q 480 275, 470 190
+                     Q 460 110, 560 90
+                     Q 700 60, 760 150
+                     Q 800 220, 700 270
+                     Q 600 320, 700 390
+                     Q 820 460, 760 540
+                     Q 700 610, 820 650
+                     Q 950 690, 940 590
+                     Q 935 500, 1050 470"
+                  fill="none"
+                  stroke="var(--camino-linea)"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-dasharray="2 26"/>
+        </svg>
+
+        <div class="niveles-capa" id="nivelesCapa">
+            <a href="semana1.jsp"  class="nivel-nodo" style="left:9%;  top:87%;" data-n="1"  data-x="9"  data-y="87"><span class="nivel-num">1</span></a>
+            <a href="semana2.jsp"  class="nivel-nodo" style="left:13%; top:70%;" data-n="2"  data-x="13" data-y="70"><span class="nivel-num">2</span></a>
+            <a href="semana3.jsp"  class="nivel-nodo" style="left:22%; top:51%;" data-n="3"  data-x="22" data-y="51"><span class="nivel-num">3</span></a>
+            <a href="semana4.jsp"  class="nivel-nodo" style="left:29%; top:36%;" data-n="4"  data-x="29" data-y="36"><span class="nivel-num">4</span></a>
+            <a href="semana5.jsp"  class="nivel-nodo" style="left:39%; top:21%;" data-n="5"  data-x="39" data-y="21"><span class="nivel-num">5</span></a>
+            <a href="semana6.jsp"  class="nivel-nodo" style="left:47%; top:10%;" data-n="6"  data-x="47" data-y="10"><span class="nivel-num">6</span></a>
+            <a href="semana7.jsp"  class="nivel-nodo" style="left:63%; top:17%;" data-n="7"  data-x="63" data-y="17"><span class="nivel-num">7</span></a>
+            <a href="semana8.jsp"  class="nivel-nodo" style="left:58%; top:30%;" data-n="8"  data-x="58" data-y="30"><span class="nivel-num">8</span></a>
+            <a href="semana9.jsp"  class="nivel-nodo" style="left:60%; top:43%;" data-n="9"  data-x="60" data-y="43"><span class="nivel-num">9</span></a>
+            <a href="semana10.jsp" class="nivel-nodo" style="left:68%; top:60%;" data-n="10" data-x="68" data-y="60"><span class="nivel-num">10</span></a>
+            <a href="semana11.jsp" class="nivel-nodo" style="left:64%; top:72%;" data-n="11" data-x="64" data-y="72"><span class="nivel-num">11</span></a>
+            <a href="semana12.jsp" class="nivel-nodo" style="left:78%; top:73%;" data-n="12" data-x="78" data-y="73"><span class="nivel-num">12</span></a>
+            <a href="semana13.jsp" class="nivel-nodo nivel-final" style="left:88%; top:53%;" data-n="13" data-x="88" data-y="53"><span class="nivel-num">★</span></a>
+        </div>
+
+        <div class="personaje-jugable" id="personaje">
+            <svg viewBox="0 0 16 24" width="30" height="45">
+                <rect class="pj-cabeza" x="5" y="0" width="6" height="6"/>
+                <rect class="pj-cuerpo" x="4" y="7" width="8" height="9"/>
+                <rect class="pj-pierna pj-pierna-izq" x="4" y="17" width="3" height="7"/>
+                <rect class="pj-pierna pj-pierna-der" x="9" y="17" width="3" height="7"/>
+            </svg>
+        </div>
+
+        <div class="hint-entrar" id="hintEntrar">Presiona <b>ENTER</b> para entrar</div>
+    </main>
+
+    <aside class="panel-jugador">
+        <div class="pj-avatar">AF</div>
+        <p class="pj-nombre">Alexis Félix</p>
+        <p class="pj-detalle">Lenguaje de Programación · 2026</p>
+        <div class="pj-barra-progreso">
+            <div class="pj-barra-relleno" id="barraProgreso"></div>
+        </div>
+        <p class="pj-progreso-texto" id="progresoTexto">0 / 13 niveles visitados</p>
+    </aside>
 </section>
 
-<!-- ======= MINIJUEGO: ESQUIVA FANTASMAS ======= -->
-<section id="arcade" class="seccion fondo-oscuro">
-    <div class="contenedor">
-        <h2><span class="coin">●</span> Minijuego: Esquiva Fantasmas</h2>
-        <p class="subtitulo">Usa ← → (o los botones) para mover a Pac-Man, recoge los puntos y esquiva a los fantasmas</p>
-
-        <div class="arcade-caja">
-            <div class="arcade-hud">
-                <span>PUNTOS: <strong id="gameScore">0</strong></span>
-                <span>VIDAS: <strong id="gameVidasTxt">3</strong></span>
-            </div>
-
-            <div class="arcade-pantalla">
-                <canvas id="canvasJuego" width="600" height="320"></canvas>
-                <div class="arcade-overlay" id="arcadeOverlay">
-                    <p class="arcade-overlay-titulo">ESQUIVA FANTASMAS</p>
-                    <p class="arcade-overlay-texto">Pulsa Iniciar y mueve a Pac-Man con ← →</p>
-                    <button class="btn1" id="btnIniciarJuego">▶ Iniciar Juego</button>
-                </div>
-            </div>
-
-            <div class="arcade-controles">
-                <button class="btn-control" id="btnIzq" aria-label="Mover izquierda">◀</button>
-                <button class="btn-control" id="btnDer" aria-label="Mover derecha">▶</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ======= HERRAMIENTAS ======= -->
-<section id="herramientas" class="seccion fondo-oscuro">
-    <div class="contenedor">
-        <h2><span class="coin">●</span> Power-Ups Utilizados</h2>
-        <p class="subtitulo">Las herramientas que me dieron puntos extra</p>
-
-        <div class="cards cards-tools">
-            <div class="card tool-card">
-                <div class="card-img"><img src="img/java.png" alt="Java"></div>
-                <div class="card-body"><h3>Java</h3><p>Desarrollo de aplicaciones orientadas a objetos.</p></div>
-            </div>
-
-            <div class="card tool-card">
-                <div class="card-img"><img src="img/neatbeansicon.png" alt="NetBeans"></div>
-                <div class="card-body"><h3>NetBeans</h3><p>Entorno de desarrollo para proyectos Java.</p></div>
-            </div>
-
-            <div class="card tool-card">
-                <div class="card-img"><img src="img/tomcat2.png" alt="Apache Tomcat"></div>
-                <div class="card-body"><h3>Apache Tomcat</h3><p>Servidor para aplicaciones web Java (JSP).</p></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ======= GAME OVER / FOOTER ======= -->
-<footer>
-    <p class="game-over">GAME OVER</p>
-    <p class="insert-coin">INSERT COIN TO CONTINUE</p>
-    <h3>Portafolio de Ejercicios — Alexis Félix</h3>
-    <p>Diseño y Programación Web — Curso Lenguaje de Programación</p>
-    <p>© 2026 Todos los Derechos Reservados</p>
+<!-- ===== FOOTER / CONTACTO ===== -->
+<footer class="footer-juego" id="contacto">
+    <p>Portafolio de Alexis Félix — Lenguaje de Programación 2026</p>
+    <p class="footer-sub">Hecho con Java, JSP, CSS y muchas horas de práctica</p>
 </footer>
 
 <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMobile = document.getElementById('navMobile');
-    hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('open');
-        navMobile.classList.toggle('open');
-    });
-    navMobile.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-            hamburger.classList.remove('open');
-            navMobile.classList.remove('open');
+(function () {
+    const mapaArea   = document.getElementById('mapaArea');
+    const personaje  = document.getElementById('personaje');
+    const hint       = document.getElementById('hintEntrar');
+    const nodos      = Array.from(document.querySelectorAll('.nivel-nodo'));
+    const barra      = document.getElementById('barraProgreso');
+    const texto      = document.getElementById('progresoTexto');
+    const total      = nodos.length;
+
+    function obtenerVisitados() {
+        try { return JSON.parse(localStorage.getItem('nivelesVisitados') || '[]'); }
+        catch (e) { return []; }
+    }
+    function marcarVisitado(n) {
+        const visitados = obtenerVisitados();
+        if (!visitados.includes(n)) {
+            visitados.push(n);
+            localStorage.setItem('nivelesVisitados', JSON.stringify(visitados));
+        }
+        pintarProgreso();
+    }
+    function pintarProgreso() {
+        const visitados = obtenerVisitados();
+        nodos.forEach(function (nodo) {
+            nodo.classList.toggle('visitado', visitados.includes(nodo.dataset.n));
         });
+        const pct = total ? Math.round((visitados.length / total) * 100) : 0;
+        barra.style.width = pct + '%';
+        texto.textContent = visitados.length + ' / ' + total + ' niveles visitados';
+    }
+    pintarProgreso();
+
+    let px, py;
+    const nodoInicial = nodos[0];
+    function iniciarPosicion() {
+        const rect = mapaArea.getBoundingClientRect();
+        px = rect.width  * (parseFloat(nodoInicial.dataset.x) / 100);
+        py = rect.height * (parseFloat(nodoInicial.dataset.y) / 100);
+    }
+    iniciarPosicion();
+    window.addEventListener('resize', iniciarPosicion);
+
+    const teclas = {};
+    window.addEventListener('keydown', function (e) {
+        if (['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)) e.preventDefault();
+        teclas[e.key] = true;
+        if (e.key === 'Enter') intentarEntrar();
     });
+    window.addEventListener('keyup', function (e) { teclas[e.key] = false; });
 
-    /* ----- Barra de progreso estilo Pacman (se llena al hacer scroll) ----- */
-    const barraRelleno = document.getElementById('barraRelleno');
-    const barraPacman = document.getElementById('barraPacman');
-    const marcadorValor = document.getElementById('marcadorValor');
-    let mejorPuntaje = 0;
-
-    function actualizarProgreso() {
-        const alturaTotal = document.documentElement.scrollHeight - window.innerHeight;
-        const avance = alturaTotal > 0 ? (window.scrollY / alturaTotal) * 100 : 0;
-        barraRelleno.style.width = avance + '%';
-        barraPacman.style.left = 'calc(' + avance + '% - 9px)';
-
-        const puntaje = Math.round(avance * 100);
-        if (puntaje > mejorPuntaje) {
-            mejorPuntaje = puntaje;
-            marcadorValor.textContent = String(mejorPuntaje).padStart(6, '0');
+    let nodoCercano = null;
+    function intentarEntrar() {
+        if (nodoCercano) {
+            marcarVisitado(nodoCercano.dataset.n);
+            window.location.href = nodoCercano.getAttribute('href');
         }
     }
-    window.addEventListener('scroll', actualizarProgreso);
-    actualizarProgreso();
 
-    /* ----- Efecto "+500" al pasar el mouse / tocar una card de nivel ----- */
-    document.querySelectorAll('#semanas .card').forEach(function (card) {
-        let bonificado = false;
-        card.addEventListener('mouseenter', function () {
-            if (bonificado) return;
-            bonificado = true;
-            mejorPuntaje += 500;
-            marcadorValor.textContent = String(mejorPuntaje).padStart(6, '0');
+    const VELOCIDAD = 260;
+    let ultimoTs = null;
 
-            const bonus = document.createElement('span');
-            bonus.className = 'bonus-flotante';
-            bonus.textContent = '+500';
-            card.appendChild(bonus);
-            setTimeout(function () { bonus.remove(); }, 900);
+    function loop(ts) {
+        if (ultimoTs === null) ultimoTs = ts;
+        const dt = (ts - ultimoTs) / 1000;
+        ultimoTs = ts;
+
+        const rect = mapaArea.getBoundingClientRect();
+        let dx = 0, dy = 0;
+        if (teclas['ArrowLeft'])  dx -= 1;
+        if (teclas['ArrowRight']) dx += 1;
+        if (teclas['ArrowUp'])    dy -= 1;
+        if (teclas['ArrowDown'])  dy += 1;
+
+        const moviendo = dx !== 0 || dy !== 0;
+        personaje.classList.toggle('caminando', moviendo);
+        if (dx < 0) personaje.classList.add('mirando-izq');
+        if (dx > 0) personaje.classList.remove('mirando-izq');
+
+        if (moviendo) {
+            const mag = Math.sqrt(dx*dx + dy*dy) || 1;
+            px += (dx / mag) * VELOCIDAD * dt;
+            py += (dy / mag) * VELOCIDAD * dt;
+            px = Math.max(10, Math.min(rect.width  - 10, px));
+            py = Math.max(10, Math.min(rect.height - 10, py));
+        }
+
+        personaje.style.left = px + 'px';
+        personaje.style.top  = py + 'px';
+
+        let mejor = null, mejorDist = 46;
+        nodos.forEach(function (nodo) {
+            const nx = rect.width  * (parseFloat(nodo.dataset.x) / 100);
+            const ny = rect.height * (parseFloat(nodo.dataset.y) / 100);
+            const d = Math.hypot(px - nx, py - ny);
+            if (d < mejorDist) { mejorDist = d; mejor = nodo; }
         });
+
+        nodos.forEach(function (n) { n.classList.remove('cerca'); });
+        if (mejor) {
+            mejor.classList.add('cerca');
+            hint.style.left = (rect.left + rect.width * (parseFloat(mejor.dataset.x) / 100)) + 'px';
+            hint.style.top  = (rect.top  + rect.height * (parseFloat(mejor.dataset.y) / 100) - 60) + 'px';
+            hint.classList.add('visible');
+        } else {
+            hint.classList.remove('visible');
+        }
+        nodoCercano = mejor;
+
+        requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+
+    nodos.forEach(function (nodo) {
+        nodo.addEventListener('click', function () { marcarVisitado(nodo.dataset.n); });
     });
-
-    /* ----- Efecto de clic: punto de Pacman que estalla donde tocas ----- */
-    document.addEventListener('click', function (e) {
-        const punto = document.createElement('div');
-        punto.className = 'click-punto';
-        punto.style.left = e.clientX + 'px';
-        punto.style.top = e.clientY + 'px';
-        document.body.appendChild(punto);
-        setTimeout(function () { punto.remove(); }, 500);
-    });
-
-    /* ----- Botón "Modo Arcade": destello rápido tipo power-pellet ----- */
-    document.getElementById('btnArcade').addEventListener('click', function () {
-        document.body.classList.add('modo-turbo');
-        mejorPuntaje += 200;
-        marcadorValor.textContent = String(mejorPuntaje).padStart(6, '0');
-        setTimeout(function () {
-            document.body.classList.remove('modo-turbo');
-        }, 900);
-    });
-
-    /* =========================================================
-       MINIJUEGO: ESQUIVA FANTASMAS
-    ========================================================= */
-    (function () {
-        const canvas = document.getElementById('canvasJuego');
-        const ctx = canvas.getContext('2d');
-        const overlay = document.getElementById('arcadeOverlay');
-        const btnIniciar = document.getElementById('btnIniciarJuego');
-        const btnIzq = document.getElementById('btnIzq');
-        const btnDer = document.getElementById('btnDer');
-        const gameScoreEl = document.getElementById('gameScore');
-        const gameVidasTxt = document.getElementById('gameVidasTxt');
-        const vidasHero = document.querySelectorAll('#vidasHero .vida');
-
-        let anchoCanvas = canvas.width;
-        let altoCanvas = canvas.height;
-
-        let jugando = false;
-        let puntaje = 0;
-        let vidas = 3;
-        let pacX = anchoCanvas / 2;
-        const pacRadio = 16;
-        const velocidadPac = 6;
-        let moverIzq = false;
-        let moverDer = false;
-
-        let objetos = []; // fantasmas y puntos cayendo
-        let cuadro = 0;
-        let dificultad = 1;
-        let animId = null;
-
-        function ajustarCanvas() {
-            const cajaAncho = canvas.parentElement.clientWidth;
-            anchoCanvas = Math.min(600, cajaAncho);
-            canvas.width = anchoCanvas;
-            canvas.height = altoCanvas;
-            pacX = anchoCanvas / 2;
-        }
-        ajustarCanvas();
-        window.addEventListener('resize', ajustarCanvas);
-
-        function actualizarVidasUI() {
-            gameVidasTxt.textContent = vidas;
-            vidasHero.forEach(function (v, i) {
-                v.classList.toggle('vida-perdida', i >= vidas);
-            });
-        }
-
-        function reiniciarJuego() {
-            puntaje = 0;
-            vidas = 3;
-            objetos = [];
-            cuadro = 0;
-            dificultad = 1;
-            pacX = anchoCanvas / 2;
-            gameScoreEl.textContent = '0';
-            actualizarVidasUI();
-        }
-
-        function dibujarPacman() {
-            ctx.save();
-            ctx.translate(pacX, altoCanvas - 30);
-            ctx.fillStyle = '#ffd400';
-            ctx.beginPath();
-            const boca = (cuadro % 20 < 10) ? 0.22 : 0.02;
-            ctx.arc(0, 0, pacRadio, boca * Math.PI, (2 - boca) * Math.PI);
-            ctx.lineTo(0, 0);
-            ctx.fill();
-            ctx.restore();
-        }
-
-        function crearObjeto() {
-            const esFantasma = Math.random() < 0.55;
-            objetos.push({
-                x: Math.random() * (anchoCanvas - 30) + 15,
-                y: -20,
-                tipo: esFantasma ? 'fantasma' : 'punto',
-                color: esFantasma ? (Math.random() < 0.5 ? '#ff3b3b' : '#ffb8de') : '#ffd400',
-                velocidad: (esFantasma ? 1.6 : 1.2) * dificultad
-            });
-        }
-
-        function dibujarObjeto(o) {
-            ctx.fillStyle = o.color;
-            if (o.tipo === 'fantasma') {
-                ctx.beginPath();
-                ctx.arc(o.x, o.y, 13, Math.PI, 0);
-                ctx.lineTo(o.x + 13, o.y + 12);
-                ctx.lineTo(o.x + 6.5, o.y + 6);
-                ctx.lineTo(o.x, o.y + 12);
-                ctx.lineTo(o.x - 6.5, o.y + 6);
-                ctx.lineTo(o.x - 13, o.y + 12);
-                ctx.closePath();
-                ctx.fill();
-            } else {
-                ctx.beginPath();
-                ctx.arc(o.x, o.y, 6, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function terminarJuego() {
-            jugando = false;
-            cancelAnimationFrame(animId);
-            overlay.style.display = 'flex';
-            overlay.innerHTML =
-                '<p class="arcade-overlay-titulo" style="color:#ff3b3b;">GAME OVER</p>' +
-                '<p class="arcade-overlay-texto">Puntaje final: ' + puntaje + '</p>' +
-                '<button class="btn1" id="btnReintentar">↻ Reintentar</button>';
-            document.getElementById('btnReintentar').addEventListener('click', function () {
-                reiniciarJuego();
-                overlay.style.display = 'none';
-                jugando = true;
-                bucle();
-            });
-
-            mejorPuntaje += puntaje;
-            marcadorValor.textContent = String(mejorPuntaje).padStart(6, '0');
-        }
-
-        function bucle() {
-            if (!jugando) return;
-            cuadro++;
-            ctx.clearRect(0, 0, anchoCanvas, altoCanvas);
-
-            if (moverIzq) pacX -= velocidadPac;
-            if (moverDer) pacX += velocidadPac;
-            pacX = Math.max(pacRadio, Math.min(anchoCanvas - pacRadio, pacX));
-
-            if (cuadro % Math.max(20, 50 - Math.floor(dificultad * 6)) === 0) {
-                crearObjeto();
-            }
-            if (cuadro % 600 === 0) dificultad += 0.4;
-
-            for (let i = objetos.length - 1; i >= 0; i--) {
-                const o = objetos[i];
-                o.y += o.velocidad;
-                dibujarObjeto(o);
-
-                const dx = o.x - pacX;
-                const dy = o.y - (altoCanvas - 30);
-                const dist = Math.sqrt(dx * dx + dy * dy);
-
-                if (dist < pacRadio + 10) {
-                    objetos.splice(i, 1);
-                    if (o.tipo === 'fantasma') {
-                        vidas--;
-                        actualizarVidasUI();
-                        if (vidas <= 0) { terminarJuego(); return; }
-                    } else {
-                        puntaje += 50;
-                        gameScoreEl.textContent = puntaje;
-                    }
-                    continue;
-                }
-
-                if (o.y > altoCanvas + 20) objetos.splice(i, 1);
-            }
-
-            dibujarPacman();
-            animId = requestAnimationFrame(bucle);
-        }
-
-        btnIniciar.addEventListener('click', function () {
-            reiniciarJuego();
-            overlay.style.display = 'none';
-            jugando = true;
-            bucle();
-        });
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'ArrowLeft') moverIzq = true;
-            if (e.key === 'ArrowRight') moverDer = true;
-        });
-        document.addEventListener('keyup', function (e) {
-            if (e.key === 'ArrowLeft') moverIzq = false;
-            if (e.key === 'ArrowRight') moverDer = false;
-        });
-
-        function ligarBotonControl(btn, activar) {
-            btn.addEventListener('mousedown', function () { activar(true); });
-            btn.addEventListener('mouseup', function () { activar(false); });
-            btn.addEventListener('mouseleave', function () { activar(false); });
-            btn.addEventListener('touchstart', function (e) { e.preventDefault(); activar(true); });
-            btn.addEventListener('touchend', function (e) { e.preventDefault(); activar(false); });
-        }
-        ligarBotonControl(btnIzq, function (v) { moverIzq = v; });
-        ligarBotonControl(btnDer, function (v) { moverDer = v; });
-
-        actualizarVidasUI();
-    })();
+})();
 </script>
 
 </body>

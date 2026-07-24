@@ -1,133 +1,63 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% request.setAttribute("semanaActual", 4); %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semana 4 | Portafolio Pixel</title>
+    <title>Semana 4 | Portafolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-    <!-- Hoja de estilos principal (base de todo el sitio: header, nav, colores, fuentes) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-    <!-- Hoja de estilos propia de esta página de ejercicio -->
-    <link rel="stylesheet" href="css/semana.css">
+    <link rel="stylesheet" href="css/semana.css?v=3">
     <link rel="icon" href="img/icon.png"/>
 </head>
 <body>
 
-<!-- ======= FONDO DE PUNTOS ESTILO LABERINTO ======= -->
-<div class="fondo-puntos" aria-hidden="true"></div>
+<%@ include file="INCLUIDE/nav-semana.jsp" %>
 
-<!-- ======= HEADER (igual que en todas las páginas) ======= -->
-<header>
-    <a href="principal.jsp" class="logo">
-        <span class="logo-pacman" aria-hidden="true"></span>
-        <span>PORTAFOLIO<em>.exe</em></span>
-    </a>
+    <main class="contenido-semana">
 
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-    </button>
+        <section class="nivel-hero">
+            <span class="nivel-tag">NIVEL 04 / 13</span>
+            <h1>Cálculo de Horas Extras</h1>
+            <p>Programa en Java que determina el pago total de un trabajador según las horas trabajadas y el pago por hora, aplicando las reglas de horas extra dobles y triples.</p>
+        </section>
 
-    <div class="nav-desktop-wrap">
-        <nav class="nav-desktop">
-            <ul>
-                <li><a href="semana1.jsp"><span class="nivel-num">1</span>Semana 1</a></li>
-                <li><a href="semana2.jsp"><span class="nivel-num">2</span>Semana 2</a></li>
-                <li><a href="semana3.jsp"><span class="nivel-num">3</span>Semana 3</a></li>
-                <li><a href="semana4.jsp" class="activo"><span class="nivel-num">4</span>Semana 4</a></li>
-                <li><a href="semana5.jsp"><span class="nivel-num">5</span>Semana 5</a></li>
-                <li><a href="semana6.jsp"><span class="nivel-num">6</span>Semana 6</a></li>
-                <li><a href="semana7.jsp"><span class="nivel-num">7</span>Semana 7</a></li>
-                <li><a href="semana8.jsp"><span class="nivel-num">8</span>Semana 8</a></li>
-                <li><a href="semana9.jsp"><span class="nivel-num">9</span>Semana 9</a></li>
-                <li><a href="semana10.jsp"><span class="nivel-num">10</span>Semana 10</a></li>
-                <li><a href="semana11.jsp"><span class="nivel-num">11</span>Semana 11</a></li>
-                <li><a href="semana12.jsp"><span class="nivel-num">12</span>Semana 12</a></li>
-                <li><a href="semana13.jsp"><span class="nivel-num">13</span>Semana 13</a></li>
-            </ul>
-        </nav>
-    </div>
+        <section class="nivel-grid">
 
-    <a href="principal.jsp#arcade" class="btn-header">
-        <span class="ghost-icon" aria-hidden="true"></span>
-        Modo Arcade
-    </a>
-</header>
-
-<!-- ======= MENÚ MÓVIL (igual que en todas las páginas) ======= -->
-<nav class="nav-mobile" id="navMobile">
-    <ul>
-        <li><a href="semana1.jsp">Semana 1</a></li>
-        <li><a href="semana2.jsp">Semana 2</a></li>
-        <li><a href="semana3.jsp">Semana 3</a></li>
-        <li><a href="semana4.jsp" class="activo">Semana 4</a></li>
-        <li><a href="semana5.jsp">Semana 5</a></li>
-        <li><a href="semana6.jsp">Semana 6</a></li>
-        <li><a href="semana7.jsp">Semana 7</a></li>
-        <li><a href="semana8.jsp">Semana 8</a></li>
-        <li><a href="semana9.jsp">Semana 9</a></li>
-        <li><a href="semana10.jsp">Semana 10</a></li>
-        <li><a href="semana11.jsp">Semana 11</a></li>
-        <li><a href="semana12.jsp">Semana 12</a></li>
-        <li><a href="semana13.jsp">Semana 13</a></li>
-    </ul>
-</nav>
-
-<!-- ======= MIGA DE PAN ======= -->
-<div class="migas">
-    <div class="contenedor">
-        <a href="principal.jsp">Inicio</a> <span>/</span> <span class="migas-actual">Semana 4</span>
-    </div>
-</div>
-
-<!-- ======= ENCABEZADO DEL NIVEL ======= -->
-<section class="nivel-hero">
-    <div class="contenedor">
-        <span class="nivel-tag">NIVEL 04 / 13</span>
-        <h1>Teorema de Pitágoras</h1>
-        <p>Este ejercicio calcula la hipotenusa de un triángulo rectángulo a partir de sus dos catetos.</p>
-    </div>
-</section>
-
-<!-- ======= CONTENIDO DEL EJERCICIO ======= -->
-<section class="seccion fondo-oscuro">
-    <div class="contenedor">
-        <div class="nivel-grid">
-
-            <!-- Captura / imagen del ejercicio -->
             <div class="nivel-imagen">
                 <div class="pantalla-juego">
                     <span class="pantalla-etiqueta">CAPTURA</span>
-                    <img src="img/semana4.png" alt="Captura del ejercicio Semana 4">
+                    <img src="img/horasextra.jpg" alt="Captura del ejercicio Semana 4">
                 </div>
             </div>
 
-            <!-- Descripción y detalles -->
             <div class="nivel-info">
                 <h2>Descripción del reto</h2>
-                <p>Dado el valor de los dos catetos de un triángulo rectángulo, el programa aplica el Teorema de Pitágoras para calcular la longitud de la hipotenusa.</p>
+                <p>El programa determina el dinero que recibirá un trabajador por concepto de horas extras trabajadas: cuando las horas exceden de 40, el resto se considera hora extra. Las horas extra se pagan al doble de una hora normal mientras no excedan de 8; las horas extra que superan las 8 se pagan las primeras 8 al doble y el resto al triple.</p>
 
                 <ul class="nivel-lista">
-                    <li><span>🟡</span> Validación de catetos positivos</li>
-                    <li><span>🟡</span> Cálculo con raíz cuadrada</li>
-                    <li><span>🟡</span> Resultado redondeado</li>
-                    <li><span>🟡</span> Interfaz Java + JSP</li>
+                    <li><span></span> Primeras 40 horas: pago normal</li>
+                    <li><span></span> Horas extra hasta 8: pago al doble</li>
+                    <li><span></span> Horas extra adicionales a 8: pago al triple</li>
+                    <li><span></span> Cálculo y reporte del pago total</li>
                 </ul>
 
                 <div class="nivel-acciones">
-                    <a href="docs/Semana4.pdf" class="btn1 btn-descarga" download>
-                        ⬇ Descargar Ejercicio
+                    <a href="archivos/semana04.zip" class="btn1 btn-descarga" download>
+                        Descargar Ejercicio
                     </a>
-                    <a href="principal.jsp#semanas" class="btn2">Volver a Niveles</a>
+                    <a href="principal.jsp#niveles" class="btn2">Volver a Niveles</a>
                 </div>
             </div>
 
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- ======= FOOTER ======= -->
+    </main>
+
+</div>
+
 <footer>
     <h3>Portafolio de Ejercicios — Alexis Félix</h3>
     <p>Diseño y Programación Web — Curso Lenguaje de Programación</p>
@@ -135,20 +65,6 @@
 </footer>
 
 <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMobile = document.getElementById('navMobile');
-    hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('open');
-        navMobile.classList.toggle('open');
-    });
-    navMobile.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-            hamburger.classList.remove('open');
-            navMobile.classList.remove('open');
-        });
-    });
-
-    /* ----- Efecto de clic: punto de Pacman que estalla donde tocas (igual que en Inicio) ----- */
     document.addEventListener('click', function (e) {
         const punto = document.createElement('div');
         punto.className = 'click-punto';

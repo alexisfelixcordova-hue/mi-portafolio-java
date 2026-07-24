@@ -1,101 +1,31 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% request.setAttribute("semanaActual", 5); %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semana 5 | Portafolio Pixel</title>
+    <title>Semana 5 | Portafolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-    <!-- Hoja de estilos principal (base de todo el sitio: header, nav, colores, fuentes) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-    <!-- Hoja de estilos propia de esta página de ejercicio -->
-    <link rel="stylesheet" href="css/semana.css">
+    <link rel="stylesheet" href="css/semana.css?v=3">
     <link rel="icon" href="img/icon.png"/>
 </head>
 <body>
 
-<!-- ======= FONDO DE PUNTOS ESTILO LABERINTO ======= -->
-<div class="fondo-puntos" aria-hidden="true"></div>
+<%@ include file="INCLUIDE/nav-semana.jsp" %>
 
-<!-- ======= HEADER (igual que en todas las páginas) ======= -->
-<header>
-    <a href="principal.jsp" class="logo">
-        <span class="logo-pacman" aria-hidden="true"></span>
-        <span>PORTAFOLIO<em>.exe</em></span>
-    </a>
+    <main class="contenido-semana">
 
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-    </button>
+        <section class="nivel-hero">
+            <span class="nivel-tag">NIVEL 05 / 13</span>
+            <h1>Cantidad de Dígitos, Suma de Pares e Impares</h1>
+            <p>Programa en Java que determina la cantidad de dígitos de un número entero y calcula por separado la suma de sus dígitos pares e impares.</p>
+        </section>
 
-    <div class="nav-desktop-wrap">
-        <nav class="nav-desktop">
-            <ul>
-                <li><a href="semana1.jsp"><span class="nivel-num">1</span>Semana 1</a></li>
-                <li><a href="semana2.jsp"><span class="nivel-num">2</span>Semana 2</a></li>
-                <li><a href="semana3.jsp"><span class="nivel-num">3</span>Semana 3</a></li>
-                <li><a href="semana4.jsp"><span class="nivel-num">4</span>Semana 4</a></li>
-                <li><a href="semana5.jsp" class="activo"><span class="nivel-num">5</span>Semana 5</a></li>
-                <li><a href="semana6.jsp"><span class="nivel-num">6</span>Semana 6</a></li>
-                <li><a href="semana7.jsp"><span class="nivel-num">7</span>Semana 7</a></li>
-                <li><a href="semana8.jsp"><span class="nivel-num">8</span>Semana 8</a></li>
-                <li><a href="semana9.jsp"><span class="nivel-num">9</span>Semana 9</a></li>
-                <li><a href="semana10.jsp"><span class="nivel-num">10</span>Semana 10</a></li>
-                <li><a href="semana11.jsp"><span class="nivel-num">11</span>Semana 11</a></li>
-                <li><a href="semana12.jsp"><span class="nivel-num">12</span>Semana 12</a></li>
-                <li><a href="semana13.jsp"><span class="nivel-num">13</span>Semana 13</a></li>
-            </ul>
-        </nav>
-    </div>
+        <section class="nivel-grid">
 
-    <a href="principal.jsp#arcade" class="btn-header">
-        <span class="ghost-icon" aria-hidden="true"></span>
-        Modo Arcade
-    </a>
-</header>
-
-<!-- ======= MENÚ MÓVIL (igual que en todas las páginas) ======= -->
-<nav class="nav-mobile" id="navMobile">
-    <ul>
-        <li><a href="semana1.jsp">Semana 1</a></li>
-        <li><a href="semana2.jsp">Semana 2</a></li>
-        <li><a href="semana3.jsp">Semana 3</a></li>
-        <li><a href="semana4.jsp">Semana 4</a></li>
-        <li><a href="semana5.jsp" class="activo">Semana 5</a></li>
-        <li><a href="semana6.jsp">Semana 6</a></li>
-        <li><a href="semana7.jsp">Semana 7</a></li>
-        <li><a href="semana8.jsp">Semana 8</a></li>
-        <li><a href="semana9.jsp">Semana 9</a></li>
-        <li><a href="semana10.jsp">Semana 10</a></li>
-        <li><a href="semana11.jsp">Semana 11</a></li>
-        <li><a href="semana12.jsp">Semana 12</a></li>
-        <li><a href="semana13.jsp">Semana 13</a></li>
-    </ul>
-</nav>
-
-<!-- ======= MIGA DE PAN ======= -->
-<div class="migas">
-    <div class="contenedor">
-        <a href="principal.jsp">Inicio</a> <span>/</span> <span class="migas-actual">Semana 5</span>
-    </div>
-</div>
-
-<!-- ======= ENCABEZADO DEL NIVEL ======= -->
-<section class="nivel-hero">
-    <div class="contenedor">
-        <span class="nivel-tag">NIVEL 05 / 13</span>
-        <h1>Estructuras Condicionales</h1>
-        <p>Programa que aplica estructuras condicionales para validar y clasificar datos ingresados por el usuario.</p>
-    </div>
-</section>
-
-<!-- ======= CONTENIDO DEL EJERCICIO ======= -->
-<section class="seccion fondo-oscuro">
-    <div class="contenedor">
-        <div class="nivel-grid">
-
-            <!-- Captura / imagen del ejercicio -->
             <div class="nivel-imagen">
                 <div class="pantalla-juego">
                     <span class="pantalla-etiqueta">CAPTURA</span>
@@ -103,31 +33,31 @@
                 </div>
             </div>
 
-            <!-- Descripción y detalles -->
             <div class="nivel-info">
                 <h2>Descripción del reto</h2>
-                <p>Se trabajan condicionales simples, dobles y anidadas para validar datos de entrada y clasificar resultados según distintas reglas de negocio.</p>
+                <p>El programa lee un número entero positivo y, con una variable auxiliar, extrae cada dígito uno por uno usando el operador módulo (%) y la división entera (/). Cuenta el total de dígitos, y clasifica cada uno como par o impar (considerando el 0 como dígito par) para acumular la suma correspondiente, repitiendo el proceso hasta que el número se reduce a 0.</p>
 
                 <ul class="nivel-lista">
-                    <li><span>🟡</span> Validación de datos de entrada</li>
-                    <li><span>🟡</span> Condicionales anidadas</li>
-                    <li><span>🟡</span> Clasificación de resultados</li>
-                    <li><span>🟡</span> Interfaz Java + JSP</li>
+                    <li><span></span> Cantidad total de dígitos del número</li>
+                    <li><span></span> Suma de dígitos pares (incluyendo el 0)</li>
+                    <li><span></span> Suma de dígitos impares</li>
+                    <li><span></span> Estructura repetitiva while + operador módulo</li>
                 </ul>
 
                 <div class="nivel-acciones">
-                    <a href="docs/Semana5.pdf" class="btn1 btn-descarga" download>
-                        ⬇ Descargar Ejercicio
+                    <a href="archivos/semana05.zip" class="btn1 btn-descarga" download>
+                        Descargar Ejercicio
                     </a>
-                    <a href="principal.jsp#semanas" class="btn2">Volver a Niveles</a>
+                    <a href="principal.jsp#niveles" class="btn2">Volver a Niveles</a>
                 </div>
             </div>
 
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- ======= FOOTER ======= -->
+    </main>
+
+</div>
+
 <footer>
     <h3>Portafolio de Ejercicios — Alexis Félix</h3>
     <p>Diseño y Programación Web — Curso Lenguaje de Programación</p>
@@ -135,20 +65,6 @@
 </footer>
 
 <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMobile = document.getElementById('navMobile');
-    hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('open');
-        navMobile.classList.toggle('open');
-    });
-    navMobile.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-            hamburger.classList.remove('open');
-            navMobile.classList.remove('open');
-        });
-    });
-
-    /* ----- Efecto de clic: punto de Pacman que estalla donde tocas (igual que en Inicio) ----- */
     document.addEventListener('click', function (e) {
         const punto = document.createElement('div');
         punto.className = 'click-punto';
