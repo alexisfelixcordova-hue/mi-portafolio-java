@@ -126,7 +126,7 @@
 
     <div class="galeria-grid">
         <div class="galeria-card">
-            <img src="img/icon.png" alt="Imagen 1">
+            <img src="img/codigo1.png" alt="Imagen 1">
         </div>
         <div class="galeria-card">
             <img src="img/codigo.png" alt="Imagen 2">
